@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
-    <modules />
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/urandumodule.iml" filepath="$PROJECT_DIR$/urandumodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/urandumodule-api.iml" filepath="$PROJECT_DIR$/api/urandumodule-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/omod/urandumodule-omod.iml" filepath="$PROJECT_DIR$/omod/urandumodule-omod.iml" />
+    </modules>
   </component>
 </project>
 
