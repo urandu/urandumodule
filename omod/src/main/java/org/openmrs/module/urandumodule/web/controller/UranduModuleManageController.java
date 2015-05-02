@@ -15,6 +15,7 @@ package org.openmrs.module.urandumodule.web.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -28,9 +29,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class  UranduModuleManageController {
 	
 	protected final Log log = LogFactory.getLog(getClass());
-	
+
+
 	@RequestMapping(value = "/module/urandumodule/manage", method = RequestMethod.GET)
 	public void manage(ModelMap model) {
 		model.addAttribute("user", Context.getAuthenticatedUser());
+        Context.getPatientService().savePatient( new Patient());
 	}
 }
