@@ -35,4 +35,10 @@ public class  UranduModuleManageController {
 		model.addAttribute("user", Context.getAuthenticatedUser());
        // Context.getPatientService().savePatient( new Patient());
 	}
+
+    @RequestMapping(value = "/module/urandumodule/patientForm", method = RequestMethod.GET)
+    public void patientForm(ModelMap model) {
+
+
+    }
 }
