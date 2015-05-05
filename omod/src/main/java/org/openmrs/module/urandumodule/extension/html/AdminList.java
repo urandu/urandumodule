@@ -45,7 +45,7 @@ public class AdminList extends AdministrationSectionExt {
 	public Map<String, String> getLinks() {
 		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
 		map.put("/module/urandumodule/manage.form", "urandumodule.manage");
-        map.put("/module/urandumodule/patientForm.form", "urandumodule.patientForm");
+        //map.put("/module/urandumodule/patientForm.form", "urandumodule.patientForm");
 		return map;
 	}
 	
