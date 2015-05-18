@@ -3,6 +3,6 @@
 
 <%@ include file="template/localHeader.jsp"%>
 
-<p></p>
+<p>New Patient</p>
 
 <%@ include file="/WEB-INF/template/footer.jsp"%>
