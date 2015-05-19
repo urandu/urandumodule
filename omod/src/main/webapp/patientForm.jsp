@@ -11,6 +11,9 @@
     <label for="given_name">Given Name:</label>
     <input type="text" name="given_name" id="given_name" required>
 
+    <label for="family_name">Family Name:</label>
+    <input type="text" name="family_name" id="family_name" required>
+
     <label for="dob">Date of birth:</label>
     <input type="date" name="dob" id="dob" required>
     <button>Submit</button>
