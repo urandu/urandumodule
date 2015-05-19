@@ -16,6 +16,7 @@
 
     <label for="dob">Date of birth:</label>
     <input type="date" name="dob" id="dob" required>
+
     <button>Submit</button>
 
 </form>
