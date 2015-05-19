@@ -4,15 +4,15 @@
 <%@ include file="template/localHeader.jsp"%>
 
 <p>New Patient</p>
-<form class="form" action="<c:url value='/create' />" method="post">
+<form class="form" action="<c:url value='/module/urandumodule/submitForm.form' />" method="post">
     <label for="fname">First Name:</label>
     <input type="text" name="fname" id="fname" required>
 
-    <label for="lname">Last Name:</label>
-    <input type="text" name="lname" id="lname" required>
+    <label for="given_name">Given Name:</label>
+    <input type="text" name="given_name" id="given_name" required>
 
-    <label for="bdate">Date of birth:</label>
-    <input type="date" name="bdate" id="bdate" required>
+    <label for="dob">Date of birth:</label>
+    <input type="date" name="dob" id="dob" required>
     <button>Submit</button>
 
 </form>
