@@ -15,6 +15,8 @@ package org.openmrs.module.urandumodule.web.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.Patient;
+import org.openmrs.Person;
 import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -40,6 +42,8 @@ public class  UranduModuleManageController {
     public void patientForm(ModelMap model) {
 
 
+        Patient patient =new Patient();
+        Person person=new Person();
 
 
     }
