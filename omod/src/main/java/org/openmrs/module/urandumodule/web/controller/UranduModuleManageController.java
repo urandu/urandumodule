@@ -108,6 +108,7 @@ public class  UranduModuleManageController {
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName(TARGET_ID);
 
         openmrsId.setIdentifier(id_number);
+
         openmrsId.setDateCreated(new Date());
         openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
         openmrsId.setIdentifierType(openmrsIdType);
