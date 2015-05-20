@@ -117,9 +117,14 @@ public class  UranduModuleManageController {
         //saving the patient
         if (!patientService.isIdentifierInUseByAnotherPatient(openmrsId)) {
             patientService.savePatient(patient);
+            model.addAttribute("save_success","Patient successfully saved");
+            return "redirect:patientForm.form";
+        }else {
+            model.addAttribute("save_success","Patient successfully saved");
+            return "redirect:patientForm.form";
         }
 
-        return "redirect:patientForm.form";
+
 
     }
 
