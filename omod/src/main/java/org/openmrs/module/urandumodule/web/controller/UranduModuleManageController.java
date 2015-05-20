@@ -60,7 +60,7 @@ public class  UranduModuleManageController {
                            @RequestParam(value = "family_name", required = false) String family_name,
                            @RequestParam(value = "middle_name", required = false) String middle_name,
                            @RequestParam(value = "given_name", required = false) String given_name,
-                         /*  @RequestParam(value = "dob", required = false) String dob,*/
+                           @RequestParam(value = "dob", required = false) Date dob,
                          @RequestParam(value = "id_number", required = false) String id_number,
                            @RequestParam(value = "gender", required = false) String gender,
                            @RequestParam(value = "address", required = false) Integer address,
@@ -87,6 +87,7 @@ public class  UranduModuleManageController {
         //gender added to person
         person.setGender(gender);
 
+        person.setBirthdate(dob);
 
         /*person.setBirthdate();*/
 
