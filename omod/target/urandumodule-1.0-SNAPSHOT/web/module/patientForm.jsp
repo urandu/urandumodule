@@ -15,6 +15,10 @@
     <label for="family_name">Family Name:</label>
     <input type="text" name="family_name" id="family_name" required>
 
+
+    <label for="id_number">ID number:</label>
+    <input type="text" name="id_number" id="id_number" required>
+
     <label for="dob">Date of birth:</label>
     <input type="date" name="dob" id="dob" required>
 

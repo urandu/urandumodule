@@ -21,7 +21,7 @@
 
     <label for="dob">Date of birth:</label>
     <input type="date" name="dob" id="dob" required>
-
+ 
     <label for="gender">Gender:</label>
     <select id="gender" name="gender" >
         <option value="M">Male</option>
