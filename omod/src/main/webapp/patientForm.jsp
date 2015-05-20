@@ -4,7 +4,7 @@
 <%@ include file="template/localHeader.jsp"%>
 
 <p>New Patient</p>
-<form class="form" action="<c:url value='/module/urandumodule/submitForm.form' />" method="post">
+<form class="form" action="<c:url value='/module/urandumodule/submitForm.form' />" method="get">
 
     <label for="given_name">Given Name:</label>
     <input type="text" name="given_name" id="given_name" required>

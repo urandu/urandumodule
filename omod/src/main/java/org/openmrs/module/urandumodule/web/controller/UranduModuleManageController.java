@@ -90,7 +90,7 @@ public class  UranduModuleManageController {
 
         Patient patient=new Patient(person);
 
-        sessionFactory.getCurrentSession().save(patient);
+        Context.getPatientService().savePatient(patient);
 
 
 
