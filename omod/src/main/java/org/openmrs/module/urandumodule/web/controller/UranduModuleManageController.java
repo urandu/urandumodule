@@ -105,7 +105,7 @@ public class  UranduModuleManageController {
         //Identifier issues
 
         PatientIdentifier openmrsId = new PatientIdentifier();
-        String TARGET_ID_KEY = "patientmodule.idType";
+        String TARGET_ID_KEY = "urandumodule.idType";
         String TARGET_ID = Context.getAdministrationService().getGlobalProperty(TARGET_ID_KEY);
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName(TARGET_ID);
         openmrsId.setIdentifier(id_number);
