@@ -15,6 +15,7 @@ package org.openmrs.module.urandumodule.web.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.hibernate.SessionFactory;
 import org.openmrs.Patient;
 import org.openmrs.Person;
 import org.openmrs.PersonName;
@@ -29,7 +30,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class  UranduModuleManageController {
-	
+
+    SessionFactory sessionFactory;
 	protected final Log log = LogFactory.getLog(getClass());
 
 
@@ -43,7 +45,9 @@ public class  UranduModuleManageController {
     public void patientForm(ModelMap model) {
 
 
+        Context.getPatientService().savePatient()
         Patient patient =new Patient();
+        patient.
         Person person=new Person();
 
         PersonName personName=new PersonName();
