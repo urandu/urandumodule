@@ -21,6 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * The main controller.
@@ -50,7 +51,12 @@ public class  UranduModuleManageController {
 
 
     @RequestMapping(value = "/module/urandumodule/submitForm", method = RequestMethod.GET)
-    public void submitForm(ModelMap model) {
+    public void submitForm(ModelMap model,
+                           @RequestParam(value = "fname", required = false) String fname,
+                           @RequestParam(value = "fname", required = false) String fname,
+                           @RequestParam(value = "fname", required = false) String fname,
+                           @RequestParam(value = "fname", required = false) String fname,
+                           @RequestParam(value = "fname", required = false) String fname) {
 
 
 
