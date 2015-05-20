@@ -26,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Date;
+
 /**
  * The main controller.
  */
@@ -59,6 +61,7 @@ public class  UranduModuleManageController {
                            @RequestParam(value = "middle_name", required = false) String middle_name,
                            @RequestParam(value = "given_name", required = false) String given_name,
                          /*  @RequestParam(value = "dob", required = false) String dob,*/
+                         @RequestParam(value = "id_number", required = false) String id_number,
                            @RequestParam(value = "gender", required = false) String gender,
                            @RequestParam(value = "address", required = false) Integer address,
                            @RequestParam(value = "postal_code", required = false) Integer postal_code,
@@ -88,15 +91,14 @@ public class  UranduModuleManageController {
         /*person.setBirthdate();*/
 
 
-        PatientIdentifierType patientIdentifierType=new PatientIdentifierType();
-        patientIdentifierType.setId(1254);
+
         Patient patient=new Patient(person);
 
 
         PatientService patientService=Context.getPatientService();
         //Identifier issues
 
-        PatientIdentifier patientIdentifier=new PatientIdentifier();
+
 
 
         PatientIdentifier openmrsId = new PatientIdentifier();
@@ -106,7 +108,7 @@ public class  UranduModuleManageController {
 
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName(TARGET_ID);
 
-        openmrsId.setIdentifier(nationalId);
+        openmrsId.setIdentifier(id_number);
         openmrsId.setDateCreated(new Date());
         openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
         openmrsId.setIdentifierType(openmrsIdType);
