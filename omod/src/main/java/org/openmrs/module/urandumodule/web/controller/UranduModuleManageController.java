@@ -16,6 +16,7 @@ package org.openmrs.module.urandumodule.web.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.openmrs.Patient;
 import org.openmrs.Person;
 import org.openmrs.PersonAddress;
 import org.openmrs.PersonName;
@@ -58,7 +59,7 @@ public class  UranduModuleManageController {
                            @RequestParam(value = "family_name", required = false) String family_name,
                            @RequestParam(value = "middle_name", required = false) String middle_name,
                            @RequestParam(value = "given_name", required = false) String given_name,
-                           @RequestParam(value = "dob", required = false) String dob,
+                         /*  @RequestParam(value = "dob", required = false) String dob,*/
                            @RequestParam(value = "gender", required = false) String gender,
                            @RequestParam(value = "address", required = false) Integer address,
                            @RequestParam(value = "postal_code", required = false) Integer postal_code,
@@ -66,6 +67,7 @@ public class  UranduModuleManageController {
                            @RequestParam(value = "country", required = false) String country) {
 
         Person person=new Person();
+
 
         PersonName personName=new PersonName();
         personName.setFamilyName(family_name);
@@ -77,11 +79,18 @@ public class  UranduModuleManageController {
         personAddress.setAddress1(address.toString());
         personAddress.setCityVillage(town);
         personAddress.setCountry(country);
+        personAddress.setPostalCode(postal_code.toString());
         //address added to person
         person.addAddress(personAddress);
+        //gender added to person
         person.setGender(gender);
 
+        /*person.setBirthdate();*/
 
+
+        Patient patient=new Patient(person);
+
+        sessionFactory.getCurrentSession().save(patient);
 
 
 
