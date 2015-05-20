@@ -56,7 +56,7 @@ public class  UranduModuleManageController {
 
 
     @RequestMapping(value = "/module/urandumodule/submitForm", method = RequestMethod.GET)
-    public void submitForm(ModelMap model,
+    public String submitForm(ModelMap model,
                            @RequestParam(value = "family_name", required = false) String family_name,
                            @RequestParam(value = "middle_name", required = false) String middle_name,
                            @RequestParam(value = "given_name", required = false) String given_name,
@@ -124,18 +124,7 @@ public class  UranduModuleManageController {
 
 
 
-
-
-        //Context.getPatientService().savePatient(patient);
-
-
-
-
-
-
-
-
-
+        return "redirect:patientForm.form";
 
 
 
