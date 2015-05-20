@@ -92,10 +92,11 @@ public class  UranduModuleManageController {
 
 
         //Identifier issues
+        
         PatientIdentifier patientIdentifier=new PatientIdentifier();
 
 
-     
+
 
 
         Context.getPatientService().savePatient(patient);
