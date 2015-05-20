@@ -27,12 +27,14 @@
     <label for="address">Address:</label>
     <input type="text" name="address" id="address" required>
 
-    <label for="town">Postal Code:</label>
+    <label for="town">Town:</label>
     <input type="text" name="town" id="town" required>
 
     <label for="postal_code">Postal Code:</label>
     <input type="text" name="postal_code" id="postal_code" required>
 
+    <label for="country">Country:</label>
+    <input type="text" name="country" id="country" required>
 
     <button>Submit</button>
 
