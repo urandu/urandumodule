@@ -16,16 +16,15 @@ package org.openmrs.module.urandumodule.web.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
-import org.openmrs.Patient;
-import org.openmrs.Person;
-import org.openmrs.PersonAddress;
-import org.openmrs.PersonName;
+import org.openmrs.*;
 import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.UUID;
 
 /**
  * The main controller.
@@ -85,11 +84,17 @@ public class  UranduModuleManageController {
         //gender added to person
         person.setGender(gender);
 
+
         /*person.setBirthdate();*/
 
 
+        PatientIdentifierType patientIdentifierType=new PatientIdentifierType();
+        patientIdentifierType.setId(1254);
         Patient patient=new Patient(person);
 
+        PatientIdentifier patientIdentifier=new PatientIdentifier();
+        patientIdentifier.setUuid(UUID.randomUUID().toString());
+        patient.addIdentifier(patientIdentifier);
         Context.getPatientService().savePatient(patient);
 
 
