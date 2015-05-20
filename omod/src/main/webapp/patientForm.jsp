@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/template/include.jsp"%>
 <%@ include file="/WEB-INF/template/header.jsp"%>
-<link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css" >
+<openmrs_i
 
 <%@ include file="template/localHeader.jsp"%>
 
