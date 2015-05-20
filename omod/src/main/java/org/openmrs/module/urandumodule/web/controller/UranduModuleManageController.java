@@ -115,6 +115,7 @@ public class  UranduModuleManageController {
         PatientIdentifierValidator.validateIdentifier(openmrsId);
         patient.addIdentifier(openmrsId);
         //saving the patient
+
         if (!patientService.isIdentifierInUseByAnotherPatient(openmrsId)) {
             patientService.savePatient(patient);
             model.addAttribute("save_success","Patient successfully saved");
