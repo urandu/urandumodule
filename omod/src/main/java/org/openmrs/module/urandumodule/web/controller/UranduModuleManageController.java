@@ -120,7 +120,7 @@ public class  UranduModuleManageController {
             model.addAttribute("save_success","Patient successfully saved");
             return "redirect:patientForm.form";
         }else {
-            model.addAttribute("save_success","Patient successfully saved");
+            model.addAttribute("save_failed","Patient not saved : duplicate id number");
             return "redirect:patientForm.form";
         }
 
