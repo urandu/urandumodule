@@ -99,35 +99,19 @@ public class  UranduModuleManageController {
             e.printStackTrace();
         }
         person.setBirthdate(birthday);
-
         /*person.setBirthdate();*/
-
-
-
-
         Patient patient=new Patient(person);
-
-
         PatientService patientService=Context.getPatientService();
         //Identifier issues
 
-
         PatientIdentifier openmrsId = new PatientIdentifier();
-
         String TARGET_ID_KEY = "patientmodule.idType";
         String TARGET_ID = Context.getAdministrationService().getGlobalProperty(TARGET_ID_KEY);
-
         PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName(TARGET_ID);
-
         openmrsId.setIdentifier(id_number);
-
-
-
         openmrsId.setDateCreated(new Date());
         openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
         openmrsId.setIdentifierType(openmrsIdType);
-
-
         PatientIdentifierValidator.validateIdentifier(openmrsId);
         patient.addIdentifier(openmrsId);
         //saving the patient
@@ -135,14 +119,7 @@ public class  UranduModuleManageController {
             patientService.savePatient(patient);
         }
 
-
-
-
-
         return "redirect:patientForm.form";
-
-
-
 
     }
 
