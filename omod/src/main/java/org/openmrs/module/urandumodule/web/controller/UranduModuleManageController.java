@@ -100,8 +100,6 @@ public class  UranduModuleManageController {
         //Identifier issues
 
 
-
-
         PatientIdentifier openmrsId = new PatientIdentifier();
 
         String TARGET_ID_KEY = "patientmodule.idType";
