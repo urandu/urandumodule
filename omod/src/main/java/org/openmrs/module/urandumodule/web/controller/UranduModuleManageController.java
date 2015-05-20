@@ -26,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -109,6 +111,8 @@ public class  UranduModuleManageController {
 
         openmrsId.setIdentifier(id_number);
 
+        DateFormat dateFormat=new SimpleDateFormat("dd-mm-yyyy");
+        Date birthday=dateFormat.parse(birthday);
         openmrsId.setDateCreated(new Date());
         openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
         openmrsId.setIdentifierType(openmrsIdType);
