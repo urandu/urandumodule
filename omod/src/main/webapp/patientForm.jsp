@@ -20,7 +20,7 @@
     <input type="text" name="id_number" id="id_number" required>
 
     <label for="dob">Date of birth:</label>
-    <input type="date" name="dob" id="dob" required>
+    <input format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
 
 
     <label for="gender">Gender:</label>
