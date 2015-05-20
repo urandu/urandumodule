@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -62,7 +63,7 @@ public class  UranduModuleManageController {
                            @RequestParam(value = "family_name", required = false) String family_name,
                            @RequestParam(value = "middle_name", required = false) String middle_name,
                            @RequestParam(value = "given_name", required = false) String given_name,
-                           @RequestParam(value = "dob", required = false) Date dob,
+                           @RequestParam(value = "dob", required = false) String dob,
                          @RequestParam(value = "id_number", required = false) String id_number,
                            @RequestParam(value = "gender", required = false) String gender,
                            @RequestParam(value = "address", required = false) Integer address,
@@ -89,7 +90,15 @@ public class  UranduModuleManageController {
         //gender added to person
         person.setGender(gender);
 
-        person.setBirthdate(dob);
+        DateFormat dateFormat=new SimpleDateFormat("dd-mm-yyyy");
+
+        Date birthday= null;
+        try {
+            birthday = dateFormat.parse(dob);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        person.setBirthdate(birthday);
 
         /*person.setBirthdate();*/
 
@@ -111,8 +120,8 @@ public class  UranduModuleManageController {
 
         openmrsId.setIdentifier(id_number);
 
-        DateFormat dateFormat=new SimpleDateFormat("dd-mm-yyyy");
-        Date birthday=dateFormat.parse(birthday);
+
+
         openmrsId.setDateCreated(new Date());
         openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
         openmrsId.setIdentifierType(openmrsIdType);
