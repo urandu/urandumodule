@@ -79,6 +79,10 @@ public class  UranduModuleManageController {
         personAddress.setCountry(country);
         //address added to person
         person.addAddress(personAddress);
+        person.setGender(gender);
+
+
+
 
 
 
