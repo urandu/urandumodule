@@ -17,7 +17,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
 import org.openmrs.*;
+import org.openmrs.api.PatientService;
 import org.openmrs.api.context.Context;
+import org.openmrs.validator.PatientIdentifierValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -91,15 +93,39 @@ public class  UranduModuleManageController {
         Patient patient=new Patient(person);
 
 
+        PatientService patientService=Context.getPatientService();
         //Identifier issues
-        
+
         PatientIdentifier patientIdentifier=new PatientIdentifier();
 
 
+        PatientIdentifier openmrsId = new PatientIdentifier();
+
+        String TARGET_ID_KEY = "patientmodule.idType";
+        String TARGET_ID = Context.getAdministrationService().getGlobalProperty(TARGET_ID_KEY);
+
+        PatientIdentifierType openmrsIdType = patientService.getPatientIdentifierTypeByName(TARGET_ID);
+
+        openmrsId.setIdentifier(nationalId);
+        openmrsId.setDateCreated(new Date());
+        openmrsId.setLocation(Context.getLocationService().getDefaultLocation());
+        openmrsId.setIdentifierType(openmrsIdType);
+
+
+        PatientIdentifierValidator.validateIdentifier(openmrsId);
+        patient.addIdentifier(openmrsId);
+        //saving the patient
+        if (!patientService.isIdentifierInUseByAnotherPatient(openmrsId)) {
+            patientService.savePatient(patient);
+        }
 
 
 
-        Context.getPatientService().savePatient(patient);
+
+
+
+
+        //Context.getPatientService().savePatient(patient);
 
 
 
