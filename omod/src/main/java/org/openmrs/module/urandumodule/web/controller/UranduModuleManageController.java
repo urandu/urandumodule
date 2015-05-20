@@ -24,8 +24,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.UUID;
-
 /**
  * The main controller.
  */
@@ -92,15 +90,13 @@ public class  UranduModuleManageController {
         patientIdentifierType.setId(1254);
         Patient patient=new Patient(person);
 
-        PatientIdentifier patientIdentifier=new PatientIdentifier();
-        patientIdentifier.setUuid(UUID.randomUUID().toString());
 
-        patientIdentifier.setIdentifierType(patientIdentifierType);
-        patientIdentifier.setIdentifier("jhjhjhjh");
-        Location location =new Location();
-        location.setCountry(country);
-        patientIdentifier.setLocation(location);
-        patient.addIdentifier(patientIdentifier);
+        //Identifier issues
+        PatientIdentifier patientIdentifier=new PatientIdentifier();
+
+        patientIdentifier.setIdentifier();
+
+
         Context.getPatientService().savePatient(patient);
 
 
