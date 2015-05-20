@@ -632,7 +632,7 @@
       <updated>1430388460120</updated>
       <workItem from="1430388464927" duration="3377000" />
       <workItem from="1432013512646" duration="10776000" />
-      <workItem from="1432101315384" duration="17568000" />
+      <workItem from="1432101315384" duration="17599000" />
     </task>
     <task id="LOCAL-00001" summary="added maven libraries">
       <created>1430475370384</created>
@@ -726,11 +726,15 @@
       <created>1432127053293</created>
       <updated>1432127053293</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="duplicate check">
+      <created>1432128203789</created>
+      <updated>1432128203789</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31721000" />
+    <option name="totallyTimeSpent" value="31752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
