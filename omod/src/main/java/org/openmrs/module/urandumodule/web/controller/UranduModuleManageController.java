@@ -97,6 +97,9 @@ public class  UranduModuleManageController {
 
         patientIdentifier.setIdentifierType(patientIdentifierType);
         patientIdentifier.setIdentifier("jhjhjhjh");
+        Location location =new Location();
+        location.setCountry(country);
+        patientIdentifier.setLocation(location);
         patient.addIdentifier(patientIdentifier);
         Context.getPatientService().savePatient(patient);
 
