@@ -16,6 +16,8 @@ package org.openmrs.module.urandumodule.web.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.openmrs.Person;
+import org.openmrs.PersonName;
 import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -52,11 +54,27 @@ public class  UranduModuleManageController {
 
     @RequestMapping(value = "/module/urandumodule/submitForm", method = RequestMethod.GET)
     public void submitForm(ModelMap model,
-                           @RequestParam(value = "fname", required = false) String fname,
-                           @RequestParam(value = "fname", required = false) String fname,
-                           @RequestParam(value = "fname", required = false) String fname,
-                           @RequestParam(value = "fname", required = false) String fname,
-                           @RequestParam(value = "fname", required = false) String fname) {
+                           @RequestParam(value = "family_name", required = false) String family_name,
+                           @RequestParam(value = "middle_name", required = false) String middle_name,
+                           @RequestParam(value = "given_name", required = false) String given_name,
+                           @RequestParam(value = "dob", required = false) String dob,
+                           @RequestParam(value = "gender", required = false) String gender,
+                           @RequestParam(value = "address", required = false) Integer address,
+                           @RequestParam(value = "postal_code", required = false) Integer postal_code,
+                           @RequestParam(value = "town", required = false) String town,
+                           @RequestParam(value = "country", required = false) String country) {
+
+        Person person=new Person();
+
+        PersonName personName=new PersonName();
+        personName.setFamilyName(family_name);
+        personName.setMiddleName(middle_name);
+        personName.setGivenName(given_name);
+        //name added to person
+        person.addName(personName);
+
+
+
 
 
 
