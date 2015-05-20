@@ -1,6 +1,6 @@
 <%@ include file="/WEB-INF/template/include.jsp"%>
 <%@ include file="/WEB-INF/template/header.jsp"%>
-<%@ include file="WEB-INF/css/bootstrap.min.css"%>
+<link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css" >
 
 <%@ include file="template/localHeader.jsp"%>
 
