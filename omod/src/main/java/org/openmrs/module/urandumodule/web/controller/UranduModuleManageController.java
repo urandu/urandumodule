@@ -17,6 +17,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
 import org.openmrs.Person;
+import org.openmrs.PersonAddress;
 import org.openmrs.PersonName;
 import org.openmrs.api.context.Context;
 import org.springframework.stereotype.Controller;
@@ -72,6 +73,14 @@ public class  UranduModuleManageController {
         personName.setGivenName(given_name);
         //name added to person
         person.addName(personName);
+        PersonAddress personAddress=new PersonAddress();
+        personAddress.setAddress1(address.toString());
+        personAddress.setCityVillage(town);
+        personAddress.setCountry(country);
+        //address added to person
+        person.addAddress(personAddress);
+
+
 
 
 
