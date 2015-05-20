@@ -94,8 +94,12 @@ public class  UranduModuleManageController {
 
         PatientIdentifier patientIdentifier=new PatientIdentifier();
         patientIdentifier.setUuid(UUID.randomUUID().toString());
+
+        patientIdentifier.setIdentifierType(patientIdentifierType);
+        patientIdentifier.setIdentifier("jhjhjhjh");
         patient.addIdentifier(patientIdentifier);
         Context.getPatientService().savePatient(patient);
+
 
 
 
