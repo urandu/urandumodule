@@ -14,10 +14,10 @@
 
             <form class="form" action="<c:url value='/module/urandumodule/submitForm.form' />" method="get">
 
-                <div class="form-control">
+                
                     <label for="given_name">Given Name:</label>
                     <input type="text" name="given_name" id="given_name" required>
-                </div>
+
 
 
                 <label for="middle_name">Middle Name:</label>
