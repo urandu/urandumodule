@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="569582b5-12a7-4335-be1c-75568f7d191f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="569582b5-12a7-4335-be1c-75568f7d191f" name="Default" comment="" />
     <ignored path="urandumodule.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,8 +89,8 @@
       <file leaf-file-name="patientForm.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/omod/src/main/webapp/patientForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14423077" vertical-offset="45" max-vertical-offset="870">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.75721157" vertical-offset="45" max-vertical-offset="870">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -623,7 +621,7 @@
       <workItem from="1430388464927" duration="3377000" />
       <workItem from="1432013512646" duration="10776000" />
       <workItem from="1432101315384" duration="20515000" />
-      <workItem from="1432150244468" duration="2794000" />
+      <workItem from="1432150244468" duration="2861000" />
     </task>
     <task id="LOCAL-00001" summary="added maven libraries">
       <created>1430475370384</created>
@@ -733,7 +731,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37462000" />
+    <option name="totallyTimeSpent" value="37529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -1079,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/omod/src/main/webapp/patientForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14423077" vertical-offset="45" max-vertical-offset="870">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.75721157" vertical-offset="45" max-vertical-offset="870">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
           <folding />
         </state>
       </provider>
