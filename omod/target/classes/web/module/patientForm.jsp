@@ -5,7 +5,7 @@
 
 <%@ include file="template/localHeader.jsp"%>
 <c:if test="${save_success}">
-    <c:out value="${save_success}"/>
+    ${save_success}
 </c:if>
 
 <p>New Patient</p>
