@@ -34,40 +34,40 @@ ${save_success}
                     <input type="text" class="form-control" name="id_number" id="id_number" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="dob">Date of birth:</label>
-                    <input class="form-control" format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="gender">Gender:</label>
-                    <select class="form-control" id="gender" name="gender">
-                        <option value="M">Male</option>
-                        <option value="M">Female</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="address">Address:</label>
-                    <input class="form-control" type="text" name="address" id="address" required>
-                </div>
-                <div class="form-group">
-                    <label for="town">Town:</label>
-                    <input type="text" class="form-control" name="town" id="town" required>
-                </div>
-                <div class="form-group">
-                    <label for="postal_code">Postal Code:</label>
-                    <input type="text" class="form-control" name="postal_code" id="postal_code" required>
-                </div>
-                <div class="form-group">
-                    <label for="country">Country:</label>
-                    <input type="text" name="country" class="form-control" id="country" required>
-                </div>
-                <button>Submit</button>
-
-            </form>
         </div>
         <div class="col-lg-6">
+            <div class="form-group">
+                <label for="dob">Date of birth:</label>
+                <input class="form-control" format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
+            </div>
 
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="M">Male</option>
+                    <option value="M">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input class="form-control" type="text" name="address" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="town">Town:</label>
+                <input type="text" class="form-control" name="town" id="town" required>
+            </div>
+            <div class="form-group">
+                <label for="postal_code">Postal Code:</label>
+                <input type="text" class="form-control" name="postal_code" id="postal_code" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" name="country" class="form-control" id="country" required>
+            </div>
+            <button>Submit</button>
+
+            </form>
         </div>
     </div>
 
