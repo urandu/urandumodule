@@ -4,9 +4,9 @@
 
 
 <%@ include file="template/localHeader.jsp"%>
-<c:if test="${save_success}">
+
     ${save_success}
-</c:if>
+
 
 <p>New Patient</p>
 <form class="form" action="<c:url value='/module/urandumodule/submitForm.form' />" method="get">
