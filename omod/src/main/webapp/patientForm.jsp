@@ -16,51 +16,51 @@ ${save_success}
 
                 <div class="form-group">
                     <label for="given_name">Given Name:</label>
-                    <input type="text" name="given_name" id="given_name" required>
+                    <input type="text" class="form-control" name="given_name" id="given_name" required>
                 </div>
 
 
                 <div class="form-group">
                     <label for="middle_name">Middle Name:</label>
-                    <input type="text" name="middle_name" id="middle_name" required>
+                    <input type="text" class="form-control" name="middle_name" id="middle_name" required>
                 </div>
                 <div class="form-group">
                     <label for="family_name">Family Name:</label>
-                    <input type="text" name="family_name" id="family_name" required>
+                    <input type="text" class="form-control"  name="family_name" id="family_name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="id_number">ID number:</label>
-                    <input type="text" name="id_number" id="id_number" required>
+                    <input type="text" class="form-control" name="id_number" id="id_number" required>
                 </div>
 
                 <div class="form-group">
                     <label for="dob">Date of birth:</label>
-                    <input format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
+                    <input class="form-control" format="yyyy-mm-dd" type="date" name="dob" id="dob" required>
                 </div>
 
                 <div class="form-group">
                     <label for="gender">Gender:</label>
-                    <select id="gender" name="gender">
+                    <select class="form-control" id="gender" name="gender">
                         <option value="M">Male</option>
                         <option value="M">Female</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="address">Address:</label>
-                    <input type="text" name="address" id="address" required>
+                    <input class="form-control" type="text" name="address" id="address" required>
                 </div>
                 <div class="form-group">
                     <label for="town">Town:</label>
-                    <input type="text" name="town" id="town" required>
+                    <input type="text" class="form-control" name="town" id="town" required>
                 </div>
                 <div class="form-group">
                     <label for="postal_code">Postal Code:</label>
-                    <input type="text" name="postal_code" id="postal_code" required>
+                    <input type="text" class="form-control" name="postal_code" id="postal_code" required>
                 </div>
                 <div class="form-group">
                     <label for="country">Country:</label>
-                    <input type="text" name="country" id="country" required>
+                    <input type="text" name="country" class="form-control" id="country" required>
                 </div>
                 <button>Submit</button>
 
