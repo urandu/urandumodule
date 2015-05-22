@@ -12,7 +12,7 @@
 		My bootcamp module
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/urandumodule/update.rdf</updateURL>
-	<require_version>1.11.0</require_version>
+	<require_version>1.10.0</require_version>
 	<!-- / Module Properties -->
 
 	
