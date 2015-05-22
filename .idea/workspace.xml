@@ -630,7 +630,7 @@
       <workItem from="1432013512646" duration="10776000" />
       <workItem from="1432101315384" duration="20515000" />
       <workItem from="1432150244468" duration="6922000" />
-      <workItem from="1432274113196" duration="3092000" />
+      <workItem from="1432274113196" duration="3697000" />
     </task>
     <task id="LOCAL-00001" summary="added maven libraries">
       <created>1430475370384</created>
@@ -764,7 +764,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44682000" />
+    <option name="totallyTimeSpent" value="45287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
