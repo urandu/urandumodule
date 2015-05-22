@@ -49,19 +49,17 @@
 
     $(document).ready(function () {
         //execute your code when the page finishes loading (when the document is ready)
+        var t = $('#entrydata').DataTable();
 
 
+        var pageCount = 270;
+        var i;
+        var j = 0;
+        for (i = 1; i <= pageCount; i++) {
 
-        setTimeout(function (){
-
-            var t = $('#entrydata').DataTable();
-
-
-            var pageCount = 270;
-            var i;
-            var j = 0;
-            for (i = 1; i <= pageCount; i++) {
+            setTimeout(function (){//delay for 5 seconds before fetching the next page
                 var dmJSON = "http://test.hiskenya.org/api/organisationUnits.jsonp?page=" + i + "&callback=?";
+                //something you want delayed
                 $.getJSON(dmJSON, function (data) {
                     $.each(data.organisationUnits, function (s, g) {
 
@@ -72,14 +70,12 @@
 
 
                 });
-
-
-            }
-
-        }, 5000); // delay for 5 seconds before fetching the next page this is to prevent the browser from hanging.
+            }, 5000); // 5000==5 seconds
 
 
 
+
+        }
 
 
     });
